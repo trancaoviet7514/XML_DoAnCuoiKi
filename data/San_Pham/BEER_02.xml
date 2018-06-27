@@ -1,3 +1,4 @@
-<Beer Ten="Ciroc Amaretto 750ML" Ma_so="BEER_02" Don_gia_Ban="340000" Don_gia_Nhap="58562" So_luong_ton="0" Doanh_thu="0" Tam_ngung="True">
+<?xml version="1.0" encoding="UTF-8"?>
+<Beer Ten="Ciroc Amaretto 750ML" Ma_so="BEER_02" Don_gia_Ban="99000" Don_gia_Nhap="58562" So_luong_ton="0" Doanh_thu="0" Tam_ngung="True">
     <LoaiBeer Ten="" Ma_so="BiaTraiCay"/>
 </Beer>

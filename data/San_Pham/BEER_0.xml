@@ -1,3 +1,4 @@
-<Beer Ten="Grey Goose Vodka 750ML" Ma_so="BEER_0" Don_gia_Ban="210000" Don_gia_Nhap="58562" So_luong_ton="5" Doanh_thu="0" Tam_ngung="Fasle">
+<?xml version="1.0" encoding="UTF-8"?>
+<Beer Ten="Grey Goose Vodka 750ML" Ma_so="BEER_0" Don_gia_Ban="12000" Don_gia_Nhap="58562" So_luong_ton="5" Doanh_thu="0" Tam_ngung="Fasle">
     <LoaiBeer Ten="" Ma_so="BiaTraiCay"/>
 </Beer>

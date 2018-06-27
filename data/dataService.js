@@ -53,7 +53,7 @@ app.createServer((req, res) => {
     switch (req.method) {
         case 'GET':
             switch (req.url) {
-                case '/LaySach':
+                case '/LaySanPham':
                     if (!cache_ListBooks) {
                         cache_ListBooks = getMethod.getListBooks();
                     }

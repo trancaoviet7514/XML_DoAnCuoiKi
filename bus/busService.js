@@ -32,10 +32,10 @@ app.createServer((req, res) => {
     switch (req.method) {
         case 'GET':
             switch (req.url) {
-                case '/LaySach': {
-                    request.get('http://localhost:3000/LaySach', function (error, respone, body) {
+                case '/LaySanPham': {
+                    request.get('http://localhost:3000/LaySanPham', function (error, respone, body) {
                         if (error) {
-                            console.log('ERROR: Không lấy được danh sách sách');
+                            console.log('ERROR: Không lấy được danh sách sản phẩm');
                             res.writeHeader(404, { 'Content-Type': 'text/plain' });
                             res.end("Error 404");
                         }

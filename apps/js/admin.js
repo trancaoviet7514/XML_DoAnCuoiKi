@@ -1,6 +1,6 @@
 function getData() {
     let xhttp = new XMLHttpRequest();
-    let query = 'http://localhost:3001/LaySach';
+    let query = 'http://localhost:3001/LaySanPham';
     xhttp.open('GET', query, false);
     xhttp.send();
     var listBooks = xhttp.responseXML.getElementsByTagName('Beer');
@@ -166,7 +166,7 @@ $("#submit_price").click(function () {
         session: sessionStorage.getItem('session')
     }
     if (obj) {
-        $.post('http://localhost:1001/CapNhatGiaBan',
+        $.post('http://localhost:3001/CapNhatGiaBan',
             JSON.stringify(obj),
             (data) =>  {
                 location.reload(true); //load lại trang
@@ -207,7 +207,7 @@ $('input[type="checkbox"]').change(function() {
 /////////////////////////////////////////////// Submit status
 $('#submit_status').click(function() {
     try {
-        $.post('http://localhost:1001/CapNhatTinhTrang',
+        $.post('http://localhost:3001/CapNhatTinhTrang',
             JSON.stringify(obj),
             (data) =>  {
                 location.reload(true); //load lại trang
