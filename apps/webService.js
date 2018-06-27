@@ -40,7 +40,7 @@ app.createServer((req, res) => {
 		case 'GET':
 			{
 				var path = req.url.split('?')[0];
-
+				
 				var req_url = (path == '/') ? '/index.html' : path;
 
 				if (req_url === '/admin.html' && position === 'nhanvien') {
