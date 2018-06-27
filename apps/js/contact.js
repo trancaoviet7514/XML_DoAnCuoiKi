@@ -10,7 +10,7 @@ $('#contact_form').submit(function(event) {
     }
 
     try {
-        $.post('http://localhost:1001/Contact', 
+        $.post('http://localhost:3001/Contact', 
         JSON.stringify(obj),
         (data) => {
             location.reload();

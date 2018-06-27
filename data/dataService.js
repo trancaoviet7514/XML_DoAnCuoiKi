@@ -1,6 +1,6 @@
 const app = require('http');
 const url = require('url');
-const port = 1000;
+const port = 3000;
 
 let getMethod = require('./services/getMethod');
 let saveMethod = require('./services/saveMethod');

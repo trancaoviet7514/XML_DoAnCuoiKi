@@ -1,7 +1,7 @@
 const app = require('http');
 const fs = require('fs');
 const resError = require('./js/error');
-const port = 1002;
+const port = 3002;
 
 let session;
 let position = '';

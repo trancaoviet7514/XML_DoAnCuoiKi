@@ -3,7 +3,7 @@ const url = require('url');
 const request = require('request');
 const nodemailer = require('nodemailer')
 
-const port = 1001;
+const port = 3001;
 let cache = "";
 let listSessions = [];
 
@@ -33,7 +33,7 @@ app.createServer((req, res) => {
         case 'GET':
             switch (req.url) {
                 case '/LaySach': {
-                    request.get('http://localhost:1000/LaySach', function (error, respone, body) {
+                    request.get('http://localhost:3000/LaySach', function (error, respone, body) {
                         if (error) {
                             console.log('ERROR: Không lấy được danh sách sách');
                             res.writeHeader(404, { 'Content-Type': 'text/plain' });
@@ -79,7 +79,7 @@ app.createServer((req, res) => {
                                     'Content-Type': 'text/plain',
                                     'Access-Control-Allow-Origin': '*'
                                 },
-                                url: 'http://localhost:1000/CapNhatGiaBan',
+                                url: 'http://localhost:3000/CapNhatGiaBan',
                                 body
                             }, function (error, response, body) {
                                 if (error) {
@@ -124,7 +124,7 @@ app.createServer((req, res) => {
                                     'Content-Type': 'text/plain',
                                     'Access-Control-Allow-Origin': '*'
                                 },
-                                url: 'http://localhost:1000/CapNhatTinhTrang',
+                                url: 'http://localhost:3000/CapNhatTinhTrang',
                                 body
                             }, function (error, response, body) {
                                 if (error) {
@@ -165,7 +165,7 @@ app.createServer((req, res) => {
                                 'Content-Type': 'text/plain',
                                 'Access-Control-Allow-Origin': '*'
                             },
-                            url: 'http://localhost:1000/Login',
+                            url: 'http://localhost:3000/Login',
                             body
                         }, function (error, response, body) {
                             if (error) {
@@ -226,14 +226,14 @@ app.createServer((req, res) => {
                         var transporter = nodemailer.createTransport({
                             service: 'gmail',
                             auth: {
-                                user: 'thoaihuynhtrong@gmail.com',
-                                pass: 'thoaideptrai'
+                                user: 'trancaoviet7514@gmail.com',
+                                pass: '221447514aA#'
                             }
                         });
 
                         var mailOptions = {
                             from: data.email,
-                            to: 'thoaihuynhtrong@gmail.com',
+                            to: 'trancaoviet7514@gmail.com',
                             subject: 'XML_Final___' + data.email + '___' + data.name,
                             text: data.message
                         };

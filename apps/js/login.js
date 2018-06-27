@@ -16,14 +16,14 @@ function validateForm() {
 $('#form_submit').submit(function (event) {
     let obj = validateForm();
     try {
-        $.post('http://localhost:1001/Login',
+        $.post('http://localhost:3001/Login',
             JSON.stringify(obj),
             (data) => {
                 var xmlObj = JSON.parse(data);
                 var isLogin = xmlObj.isLogin;
                 
                 if (isLogin) {
-                    $.post('http://localhost:1002/KiemTraViTri',
+                    $.post('http://localhost:3002/KiemTraViTri',
                         data,
                         (data) => {
                             console.log(data);
@@ -60,10 +60,10 @@ $('#form_submit').submit(function (event) {
 $('#btn_logout').click(() => {
     let session = sessionStorage.getItem('session');
     try {
-        $.post('http://localhost:1001/Logout',
+        $.post('http://localhost:3001/Logout',
             session,
             (data) => {
-                $.post('http://localhost:1002/Logout',
+                $.post('http://localhost:3002/Logout',
                     data,
                     (data) => {
                         console.log(data);

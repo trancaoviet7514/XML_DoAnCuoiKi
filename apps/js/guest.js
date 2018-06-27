@@ -1,12 +1,12 @@
 function getData() {
     let xhttp = new XMLHttpRequest();
-    let query = 'http://localhost:1001/LaySach';
+    let query = 'http://localhost:3001/LaySach';
     xhttp.open('GET', query, false);
     xhttp.send();
-    var listBooks = xhttp.responseXML.getElementsByTagName('Sach');
+    var listBooks = xhttp.responseXML.getElementsByTagName('Beer');
     var length = listBooks.length;
     for (let i = 0; i < length; i++) {
-        if (listBooks[i].getAttribute('Tam_ngung') == 'True') {
+        if (listBooks[i].getAttribute('Tam_ngung') == '') {
             listBooks[i].parentNode.removeChild(listBooks[i]);
             length--;
         }

@@ -1,9 +1,9 @@
 function getData() {
     let xhttp = new XMLHttpRequest();
-    let query = 'http://localhost:1001/LaySach';
+    let query = 'http://localhost:3001/LaySach';
     xhttp.open('GET', query, false);
     xhttp.send();
-    var listBooks = xhttp.responseXML.getElementsByTagName('Sach');
+    var listBooks = xhttp.responseXML.getElementsByTagName('Beer');
     return listBooks;
 }
 
