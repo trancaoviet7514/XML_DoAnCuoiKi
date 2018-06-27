@@ -132,7 +132,7 @@ function setListBooksbyCategory(listBooks, categoryQuery) {
     let nameOfCategory = parseQuery(categoryQuery);
 
     for (i = 0; i < length; i++) {
-        category = listBooks[i].getElementsByTagName('Nhom_Sach')[0].getAttribute('Ma_so');
+        category = listBooks[i].getElementsByTagName('LoaiBeer')[0].getAttribute('Ma_so');
 
         if (category == nameOfCategory) {
             code = listBooks[i].getAttribute('Ma_so');
@@ -252,13 +252,13 @@ function setBookSameCategory(listBooks, codeQuery) {
     let code, name, exportPrice, category;
 
     let codeBookChoose = parseQuery(codeQuery);
-    let nameOfCategory = listBooks[parseCode(codeBookChoose) - 1].getElementsByTagName('Nhom_Sach')[0].getAttribute('Ma_so');
+    let nameOfCategory = listBooks[parseCode(codeBookChoose) - 1].getElementsByTagName('LoaiBeer')[0].getAttribute('Ma_so');
     html = `<ul id="flexiselDemo3">`;
     for (i = 0; i < length; i++) {
         if (i === parseCode(codeBookChoose) - 1)
             continue;
         else {
-            category = listBooks[i].getElementsByTagName('Nhom_Sach')[0].getAttribute('Ma_so');
+            category = listBooks[i].getElementsByTagName('LoaiBeer')[0].getAttribute('Ma_so');
             if (category == nameOfCategory) {
                 code = listBooks[i].getAttribute('Ma_so');
                 name = listBooks[i].getAttribute('Ten');

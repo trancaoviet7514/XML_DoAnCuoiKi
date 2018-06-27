@@ -1,3 +1,3 @@
-<Beer Ten="" Ma_so="BEER_01" Don_gia_Ban="67735" Don_gia_Nhap="58562" So_luong_ton="0" Doanh_thu="0" Tam_ngung="True">
-    <LoaiBeer Ten="Tin học" Ma_so="TINHOC"/>
+<Beer Ten="Smirnoff Whipped Cream Vodka 1.75L" Ma_so="BEER_01" Don_gia_Ban="123000" Don_gia_Nhap="58562" So_luong_ton="0" Doanh_thu="0" Tam_ngung="false">
+    <LoaiBeer Ten="" Ma_so="BiaTraiCay"/>
 </Beer>
