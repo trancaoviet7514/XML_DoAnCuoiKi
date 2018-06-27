@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <DanhSachTaiKhoan>
-	<TaiKhoan Username="admin" Ho_ten="Tran cao viet" Password="123" Chuc_vu="admin"
+	<TaiKhoan Username="admin" Ho_ten="Trần Cao Việt" Password="123" Chuc_vu="admin"
 		Cmnd="224534849" Dia_chi="Phu Yen"/>
-	<TaiKhoan Username="staff" Ho_ten="staff" Password="123" Chuc_vu="nhanvien" 
+	<TaiKhoan Username="staff" Ho_ten="Trần Cao Việt" Password="123" Chuc_vu="nhanvien" 
 		Cmnd="224759384" Dia_Chi="Tuy Hoa"/>	
 </DanhSachTaiKhoan>

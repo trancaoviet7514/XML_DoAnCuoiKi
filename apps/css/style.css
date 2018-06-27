@@ -34,6 +34,7 @@ body a{
 .logo{
 	float:left;
 	margin-left:4em;
+	color: rgb(246, 246, 248);
 }
 .header_right{
 	float:right;
@@ -137,14 +138,8 @@ a.item_1{
   line-height: 33px;
   border: 4px solid #fff;
   font-size: 11px;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
-  border-top-right-radius: 50%;
-  /* border-bottom-right-radius: 50%; */ 
-  border-bottom-left-radius: 50%;
-  border-bottom-right-radius: 50%;
-  border-top-left-radius: 50%;
-  border-bottom-left-radius: 50%;
+  padding: 10px, 30px,30px,10px;
+  
 }
 div.item_price {
 	position: absolute;
@@ -220,9 +215,9 @@ ul.quick_access li.check{
 	background: url('../images/search.png') no-repeat 8px 9px #df4782;
 }
 .welcome_box{
-	background: #00afef;
-	padding:5em 1.4em;
-	/* margin-top: -3%; */
+	background: #53ccf8;
+	padding:1em 0.1em;
+	/* margin-top: -3%; padding:5em 1.4em;*/
 }
 .welcome_box h2{
 	color:#fff;

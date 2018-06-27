@@ -17,309 +17,72 @@
 
 <body>
 
-    <nav class="navbar navbar-inverse top-navbar" id="top-nav">
-        <div class="container-fluid">
-            <div class="navbar-header">
-
-                <a href="javascript:0;" class="sidebar-toggle">
-                    <i class="fa fa-bars"></i>
-                </a>
-                <span class="close-btn" id="hide-btn">
-                    <i class="fa fa-times" aria-hidden="true"></i>
-                </span>
-
-            </div>
-            <div style="float: right; padding: 1%;">
-                <a href="./index.html" data-toggle="tooltip" title="Trở về trang chủ">
-                    <img src="./images/home.png" alt="" srcset="" style="width: 32px; height: 32px">
-                </a>
-            </div>
-        </div>
-    </nav>
-    <!--    top nav end===========-->
-
-    <!-- begin SIDE NAV USER PANEL -->
-    <div class="container-1" id="user-profil">
-        <ul id="side" class="nav navbar-nav-1 side-nav">
-            <li class="side-user">
-                <img class="img-circle" src="./images/admin.jpg" width="140px" height="148px">
-                <p class="welcome">
-                    <i class="fa fa-key"></i> Đã Đăng Nhập</p>
-                <p class="name tooltip-sidebar-logout" id="name_user">
-                </p>
-                <a href="./index.html" id='btn_logout'>
-                    <i class="fa fa-sign-out"></i>
-                </a>
-            </li>
-
-            <li class="dashboard">
-                <a class="active" href="#">
-                    <i class="fa fa-dashboard"></i> Dashboard</a>
-            </li>
-
-            <li class="panel">
-                <a href="javascript:0;" data-toggle="collapse" data-target="#charts">
-                    <i class="fa fa-bar-chart-o"></i> Xem
-                    <i class="fa fa-caret-down pull-right"></i>
-                </a>
-
-                <ul class="collapse nav" id="charts">
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-angle-double-right"></i>Chưa hỗ trợ</a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-angle-double-right"></i>Chưa hỗ trợ</a>
-                    </li>
-                </ul>
-            </li>
-
-            <li class="panel">
-                <a href="javascript:;" data-toggle="collapse" data-target="#calendar">
-                    <i class="fa fa-calendar"></i> Thay Đổi
-                    <i class="fa fa-caret-down pull-right"></i>
-                </a>
-
-                <ul class="collapse nav" id="calendar">
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-angle-double-right"></i> Chưa hỗ trợ</a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-angle-double-right"></i> Chưa hỗ trợ</a>
-                    </li>
-                </ul>
-            </li>
-
-            <li class="panel">
-                <a href="javascript:;" data-toggle="collapse" data-target="#clipboard">
-                    <i class="fa fa-clipboard"></i> Bổ Sung
-                    <i class="fa fa-caret-down pull-right"></i>
-                </a>
-
-                <ul class="collapse nav" id="clipboard">
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-angle-double-right"></i> Chưa hỗ trợ</a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-angle-double-right"></i> Chưa hỗ trợ</a>
-                    </li>
-                </ul>
-            </li>
-
-            <li class="panel">
-                <a href="javascript:;" data-toggle="collapse" data-target="#edit">
-                    <i class="fa fa-edit"></i> Tạm Ngưng
-                    <i class="fa fa-caret-down pull-right"></i>
-                </a>
-
-                <ul class="collapse nav" id="edit">
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-angle-double-right"></i> Chưa hỗ trợ</a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-angle-double-right"></i> Chưa hỗ trợ</a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-
-
     <div class="container-2">
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-md-12">
                     <div class="page-title">
-                        <h2>Dashboard
+                        <h2> <a href="index.html">Drashboad</a>
                             
                         </h2>
                         <ol class="breadcrumb">
                             <li class="active">
-                                
-                            
                         </ol>
                     </div>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-lg-3 col-sm-6">
-                    <div class="circle-tile">
-                        <a href="#listBooksForAdmin" data-toggle="tab" class='button_seeProduct'>
-                            <div class="circle-tile-heading dark-blue">
-                                <i class="fa fa-users fa-fw fa-3x"></i>
-                            </div>
-                        </a>
-                        <div class="circle-tile-content dark-blue">
-                            <div class="circle-tile-description text-faded">
-                                Xem Mặt Hàng
-                                <div class="circle-tile-number text-faded">
-
+                    <div class="col-lg-6 col-sm-6" >
+                            <a href="#changePriceBooks" data-toggle="tab" >
+                                <div class="circle-tile">
+                                        <div class="circle-tile-content green">
+                                                <div class="circle-tile-description text-faded">
+                                                    <div class="circle-tile-number text-faded">
+                                                            Chỉnh sửa thông tin sản phẩm
+                                                    </div>
+                                                    <div class="circle-tile-number text-faded"></div>
+                                                </div>
+                                            </div>
+                                    </div>    
+                            </a>
+                    </div>
+                <div class="col-lg-6 col-sm-6">
+                    <a href="#listBooksForAdmin" data-toggle="tab" class='button_seeProduct'>
+                        <div class="circle-tile">
+                            <div class="circle-tile-content dark-blue">
+                                <div class="circle-tile-description text-faded">
+                                    <div class="circle-tile-number text-faded">
+                                            Xem tất cả mặt hàng
+                                    </div>
+                                    <div class="circle-tile-number text-faded"></div>
                                 </div>
                             </div>
-                            <a href="#listBooksForAdmin" class="circle-tile-footer button_seeProduct" data-toggle="tab">Xem thêm
-                                <i class="fa fa-chevron-circle-right"></i>
-                            </a>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="circle-tile">
-                        <a href="#changePriceBooks" data-toggle="tab">
-                            <div class="circle-tile-heading green">
-                                <i class="fa fa-money fa-fw fa-3x"></i>
-                            </div>
-                        </a>
-                        <div class="circle-tile-content green">
-                            <div class="circle-tile-description text-faded">
-                                Thay Đổi Đơn Giá
-                                <div class="circle-tile-number text-faded">
-
-                                </div>
-                            </div>
-                            <a href="#changePriceBooks" class="circle-tile-footer" data-toggle="tab">Xem thêm
-                                <i class="fa fa-chevron-circle-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-sm-6">
-                    <div class="circle-tile">
-                        <a href="#insertBook" data-toggle="tab">
-                            <div class="circle-tile-heading orange">
-                                <i class="fa fa-bell fa-fw fa-3x"></i>
-                            </div>
-                        </a>
-                        <div class="circle-tile-content orange">
-                            <div class="circle-tile-description text-faded">
-                                Bổ Sung Mặt Hàng
-                                <div class="circle-tile-number text-faded">
-
-                                </div>
-                            </div>
-                            <a href="#insertBook" class="circle-tile-footer" data-toggle="tab">Xem thêm
-                                <i class="fa fa-chevron-circle-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="circle-tile">
-                        <a href="#suspendBook" data-toggle="tab">
-                            <div class="circle-tile-heading blue">
-                                <i class="fa fa-tasks fa-fw fa-3x"></i>
-                            </div>
-                        </a>
-                        <div class="circle-tile-content blue">
-                            <div class="circle-tile-description text-faded">
-                                Tạm Ngưng Mặt Hàng
-                                <div class="circle-tile-number text-faded">
-
-                                </div>
-                            </div>
-                            <a href="#suspendBook" class="circle-tile-footer" data-toggle="tab">Xem thêm
-                                <i class="fa fa-chevron-circle-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                    </a>
+                 </div>
             </div>
 
             <div class="tab-content">
                 <div id="listBooksForAdmin" class="tab-pane fade in active"></div>
                 <div id="changePriceBooks" class="tab-pane fade">
                     <div class="container">
-                        <h2>Thống kê sách</h2>
+                        <h2>Danh sách các sản phẩm hiện có</h2>
                         <table class="table table-striped" id='tableChangePrice'>
                             <thead style="background-color: rgb(79, 129, 189); color: white">
                                 <tr>
                                     <th>Ảnh</th>
                                     <th>Mã số</th>
-                                    <th>Tên sách</th>
-                                    <th>Đơn giá hiện tại</th>
-                                    <th>Thay đổi giá</th>
+                                    <th>Tên sản phẩm</th>
+                                    <th>Đơn giá </th>
+                                    <th>Thay đổi thông tin sản phẩm</th>
                                 </tr>
                             </thead>
                             <tbody id="listForChangePrice">
                             </tbody>
                         </table>
                     </div>
-                </div>
-                <div id="insertBook" class="tab-pane fade">
-                    <h2>Tính năng chưa hỗ trợ</h2>
-                </div>
-                <div id="suspendBook" class="tab-pane fade">
-                    <div class="container">
-                        <div id="tab" class="btn-group" data-toggle="buttons-radio">
-                            <a href="#prices2" class="btn btn-large btn-info active" data-toggle="tab">Sản phẩm tạm ngưng</a>
-                            <a href="#features2" class="btn btn-large btn-info" data-toggle="tab">Sản phẩm đang hoạt động</a>
-                        </div>
-                        <div class="tab-content">
-                            <div class="tab-pane active" id="prices2">
-
-                                <h2>Danh sách tạm ngưng</h2>
-                                <!--
-                                <form action="" class="form-inline" role="form" style="margin-bottom: 2%; float: right">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Nhập nội dung tìm kiếm">
-                                    </div>
-                                    <button type="button" id="searchBookForStatusSuppended" class="btn btn-primary">Tìm kiếm</button>
-                                </form>
-                            -->
-                                <table class="table table-striped" id='tableSuppended'>
-                                    <thead style="background-color: rgb(79, 129, 189); color: white">
-                                        <tr>
-                                            <th>Ảnh</th>
-                                            <th>Mã số</th>
-                                            <th>Tên sách</th>
-                                            <th>Tình trạng</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="listSuppended">
-
-                                    </tbody>
-                                </table>
-
-                            </div>
-                            <div class="tab-pane" id="features2">
-
-                                <h2>Danh sách đang hoạt động</h2>
-                                <!--
-                                <form action="" class="form-inline" role="form" style="margin-bottom: 2%; float: right">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Nhập nội dung tìm kiếm">
-                                    </div>
-                                    <button type="button" id="searchBookForStatusActive" class="btn btn-primary">Tìm kiếm</button>
-                                </form>
-                            -->
-
-                                <table class="table table-striped" id = 'tableActive'>
-                                    <thead style="background-color: rgb(79, 129, 189); color: white">
-                                        <tr>
-                                            <th>Ảnh</th>
-                                            <th>Mã số</th>
-                                            <th>Tên sách</th>
-                                            <th>Tình trạng</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="listActive">
-
-                                    </tbody>
-                                </table>
-
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
+                </div> 
             </div>
 
             <nav id='pagination_admin' aria-label="Page navigation" style="text-align: center">
@@ -349,7 +112,7 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">Thay đổi giá bán</h4>
+                            <h4 class="modal-title">Thay đổi thông tin sản phẩm</h4>
                         </div>
                         <div class="modal-body">
                             <form action="" method="POST" role="form" style="margin-left: 1%;">
@@ -367,6 +130,32 @@
 
                                         </div>
                                     </div>
+                                    <div class="row">
+                                            <div class="col-sm-6 col-md-6">
+                                                <label for="">Tên hiện tại</label>
+                                                <input type="text" class="form-control" id="priceOld" placeholder="Input field" disabled value="Grey Goose Vodka 750ML">
+    
+                                            </div>
+                                            <div class="col-sm-6 col-md-6">
+    
+                                                <label for="">Tên mới</label>
+                                                <input type="text" class="form-control" id="priceNew" placeholder="Nhập tên mới">
+    
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                                <div class="col-sm-6 col-md-6">
+                                                    <label for="">Danh mục hiện tại</label>
+                                                    <input type="text" class="form-control" id="priceOld" placeholder="Input field" disabled value="Bia Ngoại">
+        
+                                                </div>
+                                                <div class="col-sm-6 col-md-6">
+        
+                                                    <label for="">Danh mục mới</label>
+                                                    <input type="text" class="form-control" id="priceNew" placeholder="Nhập danh mục mới">
+        
+                                                </div>
+                                            </div>
                                 </div>
                                 <button type="submit" class="btn btn-primary" id="submit_price">Submit</button>
                             </form>
@@ -378,27 +167,6 @@
 
                 </div>
             </div>
-
-            <div id="modalOfStatus" class="modal fade" role="dialog">
-                    <div class="modal-dialog">
-    
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title">Thay đổi tình trạng</h4>
-                            </div>
-                            <div class="modal-body">
-                                <form action="" method="POST" role="form" style="margin-left: 1%;">
-                                    <label for="">Bạn chắc chắn muốn thay đổi chứ?</label><br/>
-                                    <button type="submit" class="btn btn-primary" id="submit_status">Yes</button>
-                                    <button type="button" class="btn btn-default" data-dismiss="modal" id="closeModalStatus">No</button>
-                                </form>
-                            </div>
-                        </div>
-    
-                    </div>
-                </div>
         </div>
 </body>
 <!-- Bootstrap JS form CDN -->

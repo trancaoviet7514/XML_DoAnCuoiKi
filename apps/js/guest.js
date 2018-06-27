@@ -34,7 +34,7 @@ function setListBooksForNewProduct(listBooks) {
                         <div class="inner_content">
                             <div class="product_image">
                                 <img src="images/${code}.jpg" class="img-responsive" alt="" />
-                                <a href="" class="button item_add item_1"> </a>
+                                <a href="" class="button item_add item_1"> Mua </a>
                                 <div class="product_container">
                                     <div class="cart-left">
                                         <p class="title">${name}</p>

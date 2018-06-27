@@ -34,8 +34,14 @@ html += `<div class="col-md-3 col-sm-6">
                         </div>
                     </div>
                     <div class="product-option-shop">
-                            <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="/canvas/shop/?add-to-cart=70">Bán</a>
-                            <a class="prime">${formatNumber(exportPrice)} VNĐ</a>
+                            
+                            <a class="prime">${formatNumber(exportPrice)} VNĐ</a><br>
+                            <div>
+                                <input type="text" class="form-control"  placeholder="Số lượng" style="width: 50%">
+                                <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="/canvas/shop/?add-to-cart=70">Nhập</a>
+                                
+                            </div>
+                            
                     </div>                   
                 </div>
             </div>

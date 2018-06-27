@@ -6,7 +6,7 @@ if (session) {
     $('#name_user').show();
     $('#btn_logout').show();
 
-    $('#name_user').text(`Chào, ${name}`);
+    $('#name_user').text(`Xin chào, ${name}`);
 }
 else {
     $('#btn_login').show();
