@@ -1,0 +1,333 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Nhân viên</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Shape Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="application/x-javascript">
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <link href="./css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="./js/simpleCart.min.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <!-- Custom Theme files -->
+    <link href="./css/style.css" rel='stylesheet' type='text/css' />
+    <link href="./css/component.css" rel='stylesheet' type='text/css' />
+    <!-- Custom Theme files -->
+    <!--webfont-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lemonada" rel="stylesheet">
+    <script src="./js/jquery.easydropdown.js"></script>
+    <!-- Add fancyBox main JS and CSS files -->
+    <script src="./js/jquery.magnific-popup.js" type="text/javascript"></script>
+    <link href="./css/magnific-popup.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="./css/style_admin.css" rel="stylesheet" type="text/css">
+    <link href="./css/style_employee.css" rel="stylesheet" type="text/css">
+    <script>
+        $(document).ready(function () {
+            $('.popup-with-zoom-anim').magnificPopup({
+                type: 'inline',
+                fixedContentPos: false,
+                fixedBgPos: true,
+                overflowY: 'auto',
+                closeBtnInside: true,
+                preloader: false,
+                midClick: true,
+                removalDelay: 300,
+                mainClass: 'my-mfp-zoom-in'
+            });
+        });
+    </script>
+    <script src="./js/employee.js" type="text/javascript" async></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <a href="./index.html">
+                        <img src="./images/logo.png" alt="" />
+                    </a>
+                </div>
+                <div class="header_right">
+                    <ul class="social">
+                        <li>
+                            <a href="">
+                                <i class="fb"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="tw"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="utube"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="pin"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container menu-header">
+        <div id="page-wraper">
+            <div class="row">
+                <div role="tabpanel">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active">
+                            <a href="#DanhSachSP" aria-controls="home" role="tab" data-toggle="tab">Danh sách sản phẩm</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#PhieuBan" aria-controls="tab" role="tab" data-toggle="tab">Phiếu Bán</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#DSBan" aria-controls="tab" role="tab" data-toggle="tab">Danh sách sản phẩm đã bán</a>
+                        </li>
+                    </ul>
+
+                    <!-- Tab Content -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="DanhSachSP">
+                            <div class="single-product-area">
+                                <div class="zigzag-bottom"></div>
+                                <div class="container">
+                                    <div id="listBooks"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div role="tabpanel" class="tab-pane" id="PhieuBan">
+                            <div class="single-product-area">
+                                <form class="form-horizontal" action="/action_page.php">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-1" for="name">Họ tên: </label>
+                                        <div class="col-md-2">
+                                            <input type="text" class="form-control" id="name" placeholder="Nhập vào tên">
+                                        </div>
+                                        <label class="control-label col-md-2" for="phone">Điện thoại: </label>
+                                        <div class="col-md-2">
+                                            <input type="number" class="form-control" id="phone" placeholder="Nhập số điện thoại">
+                                        </div>
+                                        <label class="control-label col-md-1" for="name">Địa chỉ: </label>
+                                        <div class="col-md-4">
+                                            <input type="text" class="form-control" id="address" placeholder="Nhập vào địa chỉ">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            <table class="table table-striped" style="background-color: rgb(79, 129, 189); color: white">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Mặt hàng</th>
+                                                        <th>Số lượng</th>
+                                                        <th>Đơn giá</th>
+                                                        <th>Tiền</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody style="color: black">
+                                                    <tr>
+                                                        <td>Lập Trình Với C# Xây Dựng Ứng Dụng</td>
+                                                        <td>1</td>
+                                                        <td>68,235 VNĐ</td>
+                                                        <td>68,235 VNĐ</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-offset-2 col-sm-10">
+                                            <button type="submit" class="btn btn-default">Submit</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div role="tabpanel" class="tab-pane" id="DSBan">
+                            <div class="row row-pb-md">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="brands">
+            <ul class="brand_icons">
+                <li>
+                    <img src='./images/icon1.jpg' class="img-responsive" alt="MinhlongBook" />
+                </li>
+                <li>
+                    <img src='./images/icon2.jpg' class="img-responsive" alt="KimDong" />
+                </li>
+                <li>
+                    <img src='./images/icon3.jpg' class="img-responsive" alt="QuangVan" />
+                </li>
+                <li>
+                    <img src='./images/icon4.jpg' class="img-responsive" alt="IPM" />
+                </li>
+                <li>
+                    <img src='./images/icon5.jpg' class="img-responsive" alt="HoaHocTro" />
+                </li>
+                <li>
+                    <img src='./images/icon6.jpg' class="img-responsive" alt="AlPhaBooK" />
+                </li>
+                <li class="last">
+                    <img src='./images/icon7.jpg' class="img-responsive" alt="SkyBook" />
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <ul class="footer_social">
+            <li>
+                <a href="#">
+                    <i class="fb"> </i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="tw"> </i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="pin"> </i>
+                </a>
+            </li>
+            <div class="clearfix"></div>
+        </ul>
+    </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <h3>Dịch vụ</h3>
+                <ul class="list1">
+                    <li>
+                        <a href="#">Điều khoản sử dụng</a>
+                    </li>
+                    <li>
+                        <a href="#">Chính sách bảo mật</a>
+                    </li>
+                    <li>
+                        <a href="#">Giới thiệu Shape</a>
+                    </li>
+                    <li>
+                        <a href="#">Hệ thống trung tâm - nhà sách</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-grid">
+                <h3>Hỗ trợ</h3>
+                <ul class="list1">
+                    <li>
+                        <a href="#">Chính sách đổi-trả-hoàn tiền</a>
+                    </li>
+                    <li>
+                        <a href="#">Chính sách khách sỉ</a>
+                    </li>
+                    <li>
+                        <a href="#">Phương thức vận chuyển</a>
+                    </li>
+                    <li>
+                        <a href="#">Phương thức thanh toán</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-grid">
+                <h3>Tài khoản của tôi</h3>
+                <ul class="list1">
+                    <li>
+                        <a href="./login.html">Đăng nhập/ Tạo tài khoản mới</a>
+                    </li>
+                    <li>
+                        <a href="#">Thay đổi địa chỉ khách hàng</a>
+                    </li>
+                    <li>
+                        <a href="#">Chi tiết tài khoản</a>
+                    </li>
+                    <li>
+                        <a href="#">Lịch sử mua hàng</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-grid">
+                <h3>Đăng kí nhận tin</h3>
+                <div class="search_footer">
+                    <input type="text" class="text" value="Điền email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Điền email';}"
+                    />
+                    <input type="submit" value="Đăng kí" />
+                </div>
+                <img src="./images/payment.png" class="img-responsive" alt="" />
+            </div>
+            <div class="footer-grid footer-grid_last">
+                <h3>Liên hệ</h3>
+                <p class="footer_desc">Nếu có thắc mắc về sản phẩm. Bạn vui lòng liên hệ</p>
+                <p class="f_text">Điện thoại: &nbsp;&nbsp;&nbsp;012-345-678-91</p>
+                <p class="email">Email: &nbsp;&nbsp;&nbsp;
+                    <a href="#">info(at)Shape.com</a>
+                </p>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+    <div class="footer_bottom">
+        <div class="container">
+            <div class="copy">
+                <p>Copyright &copy; 2018 Shape. All Rights Reserved . Design by XML </p>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- Bootstrap JS form CDN -->
+<script src="https://code.jquery.com/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script async>
+    let data = getData();
+    setListBooks(data);
+</script>
+
+</html>
