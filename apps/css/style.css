@@ -26,7 +26,7 @@ body a{
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	background-position: center;
+	height: 55vh;
 }
 .header-top {
 	padding: 2em 0 3em;

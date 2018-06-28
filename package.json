@@ -1,32 +1,31 @@
 {
-    "name": "",
-    "version": "1.0.0",
-    "description": "BeerShop",
-    "main": "index.js",
-    "dependencies": {
-      "node": "^10.0.0",
-      "nodemailer": "^4.6.7",
-      "request": "^2.87.0",
-      "xhr2": "^0.1.4",
-      "xml2js": "^0.4.19",
-      "xmldom": "^0.1.27",
-      "xmlhttprequest": "^1.8.0"
-    },
-    "devDependencies": {
-      "ws": "3.3.2"
-    },
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-      "type": "git",
-      "url": ""
-    },
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-      "url": ""
-    },
-    "homepage": ""
-  }
-  
+  "name": "",
+  "version": "1.0.0",
+  "description": "BeerShop",
+  "main": "index.js",
+  "dependencies": {
+    "node": "^10.0.0",
+    "nodemailer": "^4.6.7",
+    "request": "^2.87.0",
+    "xhr2": "^0.1.4",
+    "xml2js": "^0.4.19",
+    "xmldom": "^0.1.27",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {
+    "ws": "3.3.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": ""
+}
