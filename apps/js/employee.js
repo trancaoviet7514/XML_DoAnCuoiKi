@@ -3,20 +3,20 @@ function getData() {
     let query = 'http://localhost:3001/LaySanPham';
     xhttp.open('GET', query, false);
     xhttp.send();
-    let listBooks = xhttp.responseXML.getElementsByTagName('Beer');
-    return listBooks;
+    let listProducts = xhttp.responseXML.getElementsByTagName('Beer');
+    return listProducts;
 }
 
-function setListBooks(listBooks) {
-    if ($('#listBooks').length == 0) {
+function setListProducts(listProducts) {
+    if ($('#listProducts').length == 0) {
         return;
     }
     var html = `<div class='row'>`;
-    for (i = 0; i < listBooks.length; i++) {
-        var importPrice = parseInt(listBooks[i].getAttribute('Don_gia_Ban'), 10);
-        var name = listBooks[i].getAttribute('Ten');
-        var code = listBooks[i].getAttribute('Ma_so');
-        var exportPrice = listBooks[i].getAttribute('Don_gia_Ban');
+    for (i = 0; i < listProducts.length; i++) {
+        var importPrice = parseInt(listProducts[i].getAttribute('Don_gia_Ban'), 10);
+        var name = listProducts[i].getAttribute('Ten');
+        var code = listProducts[i].getAttribute('Ma_so');
+        var exportPrice = listProducts[i].getAttribute('Don_gia_Ban');
         var cost = parseInt(exportPrice, 10) + 10000;
         if (i % 4 === 0 && i >= 4) {
             html += `</div><div class='row'>`;
@@ -48,7 +48,7 @@ html += `<div class="col-md-3 col-sm-6">
         </div>`;
     }
     html+='</div>'
-    $('#listBooks').html(html);
+    $('#listProducts').html(html);
 }
 
 function formatNumber(number) {
