@@ -3,28 +3,28 @@ function getData() {
     let query = 'http://localhost:3001/LaySanPham';
     xhttp.open('GET', query, false);
     xhttp.send();
-    var listBooks = xhttp.responseXML.getElementsByTagName('Beer');
-    var length = listBooks.length;
+    var listProducts = xhttp.responseXML.getElementsByTagName('Beer');
+    var length = listProducts.length;
     for (let i = 0; i < length; i++) {
-        if (listBooks[i].getAttribute('Tam_ngung') == '') {
-            listBooks[i].parentNode.removeChild(listBooks[i]);
+        if (listProducts[i].getAttribute('Tam_ngung') == '') {
+            listProducts[i].parentNode.removeChild(listProducts[i]);
             length--;
         }
     }
-    return listBooks;
+    return listProducts;
 }
 
-function setListBooksForNewProduct(listBooks) {
-    if ($('#newBooks').length == 0)
+function setListProductsForNewProduct(listProducts) {
+    if ($('#newProducts').length == 0)
         return;
-    let length = listBooks.length;
+    let length = listProducts.length;
     let html = '';
     let code, name, exportPrice, status;
     for (i = 0; i < 9; i++) {
         random = Math.floor((Math.random() * (length - 1)) + 0);
-        code = listBooks[random].getAttribute('Ma_so');
-        name = listBooks[random].getAttribute('Ten');
-        exportPrice = listBooks[random].getAttribute('Don_gia_Ban');
+        code = listProducts[random].getAttribute('Ma_so');
+        name = listProducts[random].getAttribute('Ten');
+        exportPrice = listProducts[random].getAttribute('Don_gia_Ban');
 
         if (i % 3 === 0)
             html += `<div class="content_grid">`;
@@ -53,21 +53,21 @@ function setListBooksForNewProduct(listBooks) {
             html += `</div>`;
     }
 
-    $('#newBooks').html(html);
+    $('#newProducts').html(html);
 }
 
-function setListBooksForBuy(listBooks) {
-    if ($("#buyMuchBooks").length == 0)
+function setListProductsForBuy(listProducts) {
+    if ($("#buyMuchProducts").length == 0)
         return;
-    let length = listBooks.length;
+    let length = listProducts.length;
     let count = 0;
     let html = '<ul id="flexiselDemo3">';
     let code, name, exportPrice;
 
     for (i = 0; i < length; i++) {
-        code = listBooks[i].getAttribute('Ma_so');
-        name = listBooks[i].getAttribute('Ten');
-        exportPrice = listBooks[i].getAttribute('Don_gia_Ban');
+        code = listProducts[i].getAttribute('Ma_so');
+        name = listProducts[i].getAttribute('Ten');
+        exportPrice = listProducts[i].getAttribute('Don_gia_Ban');
 
         if (name.length < 35) {
             html += `<li>
@@ -86,20 +86,20 @@ function setListBooksForBuy(listBooks) {
             break;
     }
     html += '</ul>';
-    $("#buyMuchBooks").html(html);
+    $("#buyMuchProducts").html(html);
 }
 
-function setListBooksForShop(listBooks, numberBooksOfAPage) {
-    if ($("#listBooksForShop").length === 0)
+function setListProductsForShop(listProducts, numberProductsOfAPage) {
+    if ($("#listProductsForShop").length === 0)
         return;
-    let length = listBooks.length;
+    let length = listProducts.length;
     let html = '<ul>';
     let code, name, exportPrice, category;
 
-    for (i = 0; i < numberBooksOfAPage; i++) {
-        code = listBooks[i].getAttribute('Ma_so');
-        name = listBooks[i].getAttribute('Ten');
-        exportPrice = listBooks[i].getAttribute('Don_gia_Ban');
+    for (i = 0; i < numberProductsOfAPage; i++) {
+        code = listProducts[i].getAttribute('Ma_so');
+        name = listProducts[i].getAttribute('Ten');
+        exportPrice = listProducts[i].getAttribute('Don_gia_Ban');
 
         html += `<li class="simpleCart_shelfItem">
             <a class="cbp-vm-image" href="/single.html?Ma_so=${code}">
@@ -119,25 +119,25 @@ function setListBooksForShop(listBooks, numberBooksOfAPage) {
         </li>`
     }
     html += '</ul>';
-    $("#listBooksForShop").html(html);
+    $("#listProductsForShop").html(html);
 }
 
-function setListBooksbyCategory(listBooks, categoryQuery) {
-    if ($("#listBooksForShop").length === 0)
+function setListProductsbyCategory(listProducts, categoryQuery) {
+    if ($("#listProductsForShop").length === 0)
         return;
-    let length = listBooks.length;
+    let length = listProducts.length;
     let html = '<ul>';
     let code, name, exportPrice, category;
 
     let nameOfCategory = parseQuery(categoryQuery);
 
     for (i = 0; i < length; i++) {
-        category = listBooks[i].getElementsByTagName('LoaiBeer')[0].getAttribute('Ma_so');
+        category = listProducts[i].getElementsByTagName('LoaiBeer')[0].getAttribute('Ma_so');
 
         if (category == nameOfCategory) {
-            code = listBooks[i].getAttribute('Ma_so');
-            name = listBooks[i].getAttribute('Ten');
-            exportPrice = listBooks[i].getAttribute('Don_gia_Ban');
+            code = listProducts[i].getAttribute('Ma_so');
+            name = listProducts[i].getAttribute('Ten');
+            exportPrice = listProducts[i].getAttribute('Don_gia_Ban');
             html += `<li class="simpleCart_shelfItem">
             <a class="cbp-vm-image" href="/single.html?Ma_so=${code}">
                 <div class="inner_content clearfix">
@@ -157,7 +157,7 @@ function setListBooksbyCategory(listBooks, categoryQuery) {
         }
     }
     html += '</ul>';
-    $("#listBooksForShop").html(html);
+    $("#listProductsForShop").html(html);
 }
 
 function formatNumber(number) {
@@ -177,20 +177,20 @@ function parseCode(params) {
 }
 
 //single
-function setDetailBook(listBooks, codeQuery) {
-    if ($('#detailBook').length == 0)
+function setDetailProduct(listProducts, codeQuery) {
+    if ($('#detailProduct').length == 0)
         return;
-    let length = listBooks.length;
+    let length = listProducts.length;
     let html = '';
     let code, name, exportPrice;
 
-    let codeBookChoose = parseQuery(codeQuery);
+    let codeProductChoose = parseQuery(codeQuery);
     for (i = 0; i < length; i++) {
-        code = listBooks[i].getAttribute('Ma_so');
+        code = listProducts[i].getAttribute('Ma_so');
 
-        if (code === codeBookChoose) {
-            name = listBooks[i].getAttribute('Ten');
-            exportPrice = listBooks[i].getAttribute('Don_gia_Ban');
+        if (code === codeProductChoose) {
+            name = listProducts[i].getAttribute('Ten');
+            exportPrice = listProducts[i].getAttribute('Don_gia_Ban');
 
             html += `<div class="singel_right">
             <div class="labout span_1_of_a1">
@@ -242,27 +242,27 @@ function setDetailBook(listBooks, codeQuery) {
         }
     }
 
-    $('#detailBook').html(html);
+    $('#detailProduct').html(html);
 }
 
-function setBookSameCategory(listBooks, codeQuery) {
-    if ($("#sameCategoryListBooks").length === 0)
+function setProductSameCategory(listProducts, codeQuery) {
+    if ($("#sameCategoryListProducts").length === 0)
         return;
-    let length = listBooks.length;
+    let length = listProducts.length;
     let code, name, exportPrice, category;
 
-    let codeBookChoose = parseQuery(codeQuery);
-    let nameOfCategory = listBooks[parseCode(codeBookChoose) - 1].getElementsByTagName('LoaiBeer')[0].getAttribute('Ma_so');
+    let codeProductChoose = parseQuery(codeQuery);
+    let nameOfCategory = listProducts[parseCode(codeProductChoose) - 1].getElementsByTagName('LoaiBeer')[0].getAttribute('Ma_so');
     html = `<ul id="flexiselDemo3">`;
     for (i = 0; i < length; i++) {
-        if (i === parseCode(codeBookChoose) - 1)
+        if (i === parseCode(codeProductChoose) - 1)
             continue;
         else {
-            category = listBooks[i].getElementsByTagName('LoaiBeer')[0].getAttribute('Ma_so');
+            category = listProducts[i].getElementsByTagName('LoaiBeer')[0].getAttribute('Ma_so');
             if (category == nameOfCategory) {
-                code = listBooks[i].getAttribute('Ma_so');
-                name = listBooks[i].getAttribute('Ten');
-                exportPrice = listBooks[i].getAttribute('Don_gia_Ban');
+                code = listProducts[i].getAttribute('Ma_so');
+                name = listProducts[i].getAttribute('Ten');
+                exportPrice = listProducts[i].getAttribute('Don_gia_Ban');
 
                 if (name.length < 40) {
                     html += `<li>
@@ -278,5 +278,5 @@ function setBookSameCategory(listBooks, codeQuery) {
         }
     }
     html += `</ul>`
-    $("#sameCategoryListBooks").html(html);
+    $("#sameCategoryListProducts").html(html);
 }

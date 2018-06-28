@@ -3,21 +3,21 @@ function getData() {
     let query = 'http://localhost:3001/LaySanPham';
     xhttp.open('GET', query, false);
     xhttp.send();
-    var listBooks = xhttp.responseXML.getElementsByTagName('Beer');
-    return listBooks;
+    var listProducts = xhttp.responseXML.getElementsByTagName('Beer');
+    return listProducts;
 }
 
-function setListBooksForAdmin(listBooks, start, end) {
-    if ($("#listBooksForAdmin").length === 0)
+function setListProductsForAdmin(listProducts, start, end) {
+    if ($("#listProductsForAdmin").length === 0)
         return;
-    let length = listBooks.length;
+    let length = listProducts.length;
     let html = `<div class='row'>`;
     let code, name, exportPrice;
 
     for (i = start;i < end;i++) {
-        code = listBooks[i].getAttribute('Ma_so');
-        name = listBooks[i].getAttribute('Ten');
-        exportPrice = listBooks[i].getAttribute('Don_gia_Ban');
+        code = listProducts[i].getAttribute('Ma_so');
+        name = listProducts[i].getAttribute('Ten');
+        exportPrice = listProducts[i].getAttribute('Don_gia_Ban');
 
         if (i % 4 === 0 && i >= 4)
             html += `</div><div class='row'>`;
@@ -38,20 +38,20 @@ function setListBooksForAdmin(listBooks, start, end) {
                 </div>`
     }
     html += '</div>';
-    $("#listBooksForAdmin").html(html);
+    $("#listProductsForAdmin").html(html);
 }
 
-function changePrice(listBooks) {
+function changePrice(listProducts) {
     if ($("#listForChangePrice").length === 0)
         return;
     let html = '';
     let code, name, exportPrice;
-    let length = listBooks.length;
+    let length = listProducts.length;
     
     for (let i = 0;i < length;i++) {
-        code = listBooks[i].getAttribute('Ma_so');
-        name = listBooks[i].getAttribute('Ten');
-        exportPrice = listBooks[i].getAttribute('Don_gia_Ban');
+        code = listProducts[i].getAttribute('Ma_so');
+        name = listProducts[i].getAttribute('Ten');
+        exportPrice = listProducts[i].getAttribute('Don_gia_Ban');
         
         html += `<tr>
                     <td>
@@ -66,18 +66,18 @@ function changePrice(listBooks) {
     $("#listForChangePrice").html(html);
 }
 
-function suppendBook(listBooks) {
+function suppendProduct(listProducts) {
     if ($("#listSuppended").length === 0 || $("#listActive").length === 0)
         return;
 
-    let length = listBooks.length;
+    let length = listProducts.length;
     let html_sup = '', html_act = '';
     let code, name, exportPrice, suppend;
 
     for (let i = 0;i < length;i++) {
-        code = listBooks[i].getAttribute('Ma_so');
-        name = listBooks[i].getAttribute('Ten');
-        suppend = listBooks[i].getAttribute('Tam_ngung');
+        code = listProducts[i].getAttribute('Ma_so');
+        name = listProducts[i].getAttribute('Ten');
+        suppend = listProducts[i].getAttribute('Tam_ngung');
         if (suppend == "True") {
             html_sup += `<tr data-toggle="toggle" data-size="mini">
                         <td>
@@ -115,7 +115,7 @@ let key = parseQuery(params).key;
 let value = parseQuery(params).value;
 
 changePrice(data);
-suppendBook(data);
+suppendProduct(data);
 
 switch (key) {
     case 'view': {
@@ -123,7 +123,7 @@ switch (key) {
         break;
     }
     default: {
-        setListBooksForAdmin(data, 0 ,12);
+        setListProductsForAdmin(data, 0 ,12);
     }   
 }
 
@@ -222,12 +222,12 @@ $('#submit_status').click(function() {
     }
 });
 
-///////////////////////////////////////////////////Phân trang
+
 
 function paginationView(data, value) {
     value = +value;
     end = (value * 12 + 12) < data.length ? (value * 12 + 12) : data.length; 
-    setListBooksForAdmin(data, value * 12, end);
+    setListProductsForAdmin(data, value * 12, end);
 }
 
 function parseQuery(params) {

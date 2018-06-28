@@ -8,12 +8,16 @@ const pathPBH = __dirname + '/../Phieu_Ban_hang'
 let changePrice = (data) => {
     let code = data.code;
     let priceNew = data.priceNew;
+    let nameNew = data.nameNew;
+    let categoryNew = data.categoryNew;
 
     let filePath = pathSP + '/' + code + '.xml';
 
     let xml = fs.readFileSync(filePath, 'utf-8');
     let xmlDOM = new DOMParser().parseFromString(xml, 'text/xml').documentElement;
     xmlDOM.setAttribute('Don_gia_Ban', priceNew);
+    xmlDOM.setAttribute('Ten',nameNew);
+    
 
     let xmlNew = '<?xml version="1.0" encoding="UTF-8"?>\n' + new XMLSerializer().serializeToString(xmlDOM);
     

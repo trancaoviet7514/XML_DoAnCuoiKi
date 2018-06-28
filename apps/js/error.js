@@ -103,130 +103,13 @@ module.exports = function(res, error) {
         </div>
         <div class="container">
             <div class="brands">
-                <ul class="brand_icons">
-                    <li>
-                        <img src='../images/icon1.jpg' class="img-responsive" alt="MinhlongBook" />
-                    </li>
-                    <li>
-                        <img src='../images/icon2.jpg' class="img-responsive" alt="KimDong" />
-                    </li>
-                    <li>
-                        <img src='../images/icon3.jpg' class="img-responsive" alt="QuangVan" />
-                    </li>
-                    <li>
-                        <img src='../images/icon4.jpg' class="img-responsive" alt="IPM" />
-                    </li>
-                    <li>
-                        <img src='../images/icon5.jpg' class="img-responsive" alt="HoaHocTro" />
-                    </li>
-                    <li>
-                        <img src='../images/icon6.jpg' class="img-responsive" alt="AlPhaBooK" />
-                    </li>
-                    <li class="last">
-                        <img src='../images/icon7.jpg' class="img-responsive" alt="SkyBook" />
-                    </li>
-                </ul>
+                
             </div>
         </div>
         <div class="container">
-            <ul class="footer_social">
-                <li>
-                    <a href="#">
-                        <i class="fb"> </i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="tw"> </i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="pin"> </i>
-                    </a>
-                </li>
-                <div class="clearfix"></div>
-            </ul>
+            
         </div>
-        <div class="footer">
-            <div class="container">
-                <div class="footer-grid">
-                    <h3>Dịch vụ</h3>
-                    <ul class="list1">
-                        <li>
-                            <a href="#">Điều khoản sử dụng</a>
-                        </li>
-                        <li>
-                            <a href="#">Chính sách bảo mật</a>
-                        </li>
-                        <li>
-                            <a href="#">Giới thiệu Shape</a>
-                        </li>
-                        <li>
-                            <a href="#">Hệ thống trung tâm - nhà sách</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-grid">
-                    <h3>Hỗ trợ</h3>
-                    <ul class="list1">
-                        <li>
-                            <a href="#">Chính sách đổi-trả-hoàn tiền</a>
-                        </li>
-                        <li>
-                            <a href="#">Chính sách khách sỉ</a>
-                        </li>
-                        <li>
-                            <a href="#">Phương thức vận chuyển</a>
-                        </li>
-                        <li>
-                            <a href="#">Phương thức thanh toán</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-grid">
-                    <h3>Tài khoản của tôi</h3>
-                    <ul class="list1">
-                        <li>
-                            <a href="#">Đăng nhập/ Tạo tài khoản mới</a>
-                        </li>
-                        <li>
-                            <a href="#">Thay đổi địa chỉ khách hàng</a>
-                        </li>
-                        <li>
-                            <a href="#">Chi tiết tài khoản</a>
-                        </li>
-                        <li>
-                            <a href="#">Lịch sử mua hàng</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-grid">
-                    <h3>Đăng kí nhận tin</h3>
-                    <div class="search_footer">
-                        <input type="text" class="text" value="Điền email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Điền email';}">
-                        <input type="submit" value="Đăng kí">
-                    </div>
-                    <img src="../images/payment.png" class="img-responsive" alt="" />
-                </div>
-                <div class="footer-grid footer-grid_last">
-                    <h3>Liên hệ</h3>
-                    <p class="footer_desc">Nếu có thắc mắc về sản phẩm. Bạn vui lòng liên hệ</p>
-                    <p class="f_text">Điện thoại: &nbsp;&nbsp;&nbsp;012-345-678-91</p>
-                    <p class="email">Email: &nbsp;&nbsp;&nbsp;
-                        <a href="#">info(at)Shape.com</a>
-                    </p>
-                </div>
-                <div class="clearfix"> </div>
-            </div>
-        </div>
-        <div class="footer_bottom">
-            <div class="container">
-                <div class="copy">
-                    <p>Copyright &copy; 2018 Shape. All Rights Reserved . Design by XML </p>
-                </div>
-            </div>
-        </div>
+        
     </body>
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
     <script src="./js/jquery.min.js"></script>

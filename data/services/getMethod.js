@@ -4,20 +4,19 @@ const xml2js = require('xml2js');
 const pathSP = __dirname + '/../San_Pham';
 const pathAC = __dirname + '/../Tai_Khoan/Taikhoan.xml'
 
-//Lấy danh sách truyện
-let getListBooks = () => {
-    listBooks = [];
+let getListProducts = () => {
+    listProducts = [];
     fs.readdirSync(pathSP).forEach(file => {
         var filepath = pathSP + "/" + file;
         var parser = new xml2js.Parser();
         var data = fs.readFileSync(filepath, "utf-8");
 
         parser.parseString(data, function (err, result) {
-            listBooks.push(result);
+            listProducts.push(result);
         })
     })
     var builder = new xml2js.Builder();
-    var xml = builder.buildObject(listBooks);
+    var xml = builder.buildObject(listProducts);
     return xml;
 }
 
@@ -29,6 +28,6 @@ let getAccount = () => {
 
 
 module.exports = {
-    getListBooks: getListBooks,
+    getListProducts: getListProducts,
     getAccount: getAccount
 }
